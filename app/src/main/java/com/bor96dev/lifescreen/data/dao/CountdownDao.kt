@@ -11,10 +11,13 @@ import com.bor96dev.lifescreen.data.Countdown
 @Dao
 interface CountdownDao {
     @Insert(onConflict = OnConflictStrategy.REPLACE)
-    suspend fun insert(countdown: Countdown) : Long
+    suspend fun insert(countdown: Countdown): Long
 
     @Query("SELECT * FROM Countdown WHERE userId = :userId")
     suspend fun getCountdownsForUser(userId: Int): List<Countdown>
+
+    @Query("SELECT * FROM Countdown WHERE id = :countdownId")
+    suspend fun getCountdown(countdownId: Int): Countdown
 
     @Update
     suspend fun update(countdown: Countdown)
