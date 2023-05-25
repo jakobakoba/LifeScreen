@@ -24,11 +24,13 @@ object AppModule {
             "app_database"
         ).build()
     }
-
+    @Provides
+    @JvmStatic
     fun provideUserDao(db: AppDatabase): UserDao {
         return db.userDao()
     }
-
+    @Provides
+    @JvmStatic
     fun provideCountdownDao(db: AppDatabase): CountdownDao {
         return db.countdownDao()
     }
