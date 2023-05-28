@@ -14,14 +14,16 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.lifecycle.ViewModelProvider
 import com.bor96dev.lifescreen.presentation.view.MyApp
 import com.bor96dev.lifescreen.presentation.viewmodel.UserViewModel
-import com.bor96dev.lifescreen.ui.theme.LifeScreenTheme
+import com.bor96dev.lifescreen.presentation.theme.LifeScreenTheme
+import com.bor96dev.lifescreen.presentation.viewmodel.CountdownViewModel
 
 class MainActivity : ComponentActivity() {
+    private val viewModel: CountdownViewModel by viewModels()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {
-            MyApp()
+            MyApp(viewModel = viewModel)
             }
         }
     }

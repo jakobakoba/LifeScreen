@@ -6,8 +6,7 @@ import androidx.room.PrimaryKey
 @Entity
 data class Countdown(
     @PrimaryKey(autoGenerate = true)
-    val id: Int = 0,
-    val userId: Int,
-    val targetDate: Long,
+    val id: Int,
     val title: String,
+    val remainingTime: String
 )

@@ -1,4 +1,4 @@
-package com.bor96dev.lifescreen.domain.repository
+package com.bor96dev.lifescreen.presentation.theme.domain.repository
 
 import com.bor96dev.lifescreen.data.User
 import com.bor96dev.lifescreen.data.dao.UserDao

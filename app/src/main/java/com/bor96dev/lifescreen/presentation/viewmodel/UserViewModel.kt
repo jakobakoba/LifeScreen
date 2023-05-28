@@ -6,8 +6,8 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.bor96dev.lifescreen.data.Countdown
 import com.bor96dev.lifescreen.data.User
-import com.bor96dev.lifescreen.domain.GetCountdownUseCase
-import com.bor96dev.lifescreen.domain.GetUserUseCase
+import com.bor96dev.lifescreen.presentation.theme.domain.GetCountdownUseCase
+import com.bor96dev.lifescreen.presentation.theme.domain.GetUserUseCase
 import kotlinx.coroutines.launch
 
 class UserViewModel(

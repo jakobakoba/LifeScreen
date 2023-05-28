@@ -1,4 +1,4 @@
-package com.bor96dev.lifescreen.ui.theme
+package com.bor96dev.lifescreen.presentation.theme
 
 import androidx.compose.ui.graphics.Color
 
