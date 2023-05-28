@@ -18,12 +18,12 @@ import com.bor96dev.lifescreen.presentation.theme.LifeScreenTheme
 import com.bor96dev.lifescreen.presentation.viewmodel.CountdownViewModel
 
 class MainActivity : ComponentActivity() {
-    private val viewModel: CountdownViewModel by viewModels()
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {
-            MyApp(viewModel = viewModel)
+            MyApp()
             }
         }
     }

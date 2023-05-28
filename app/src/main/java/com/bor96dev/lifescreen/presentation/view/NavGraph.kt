@@ -15,7 +15,7 @@ import com.bor96dev.lifescreen.presentation.viewmodel.UserViewModel
 
 @SuppressLint("UnusedMaterialScaffoldPaddingParameter")
 @Composable
-fun NavGraph(navController: NavController, userViewModel: UserViewModel, countdownViewModel: CountdownViewModel) {
+fun NavGraph(navController: NavController) {
     val navBackStackEntry by navController.currentBackStackEntryAsState()
     val currentRoute = navBackStackEntry?.destination?.route
 
@@ -23,7 +23,7 @@ fun NavGraph(navController: NavController, userViewModel: UserViewModel, countdo
 
         NavHost(navController = navController as NavHostController, startDestination = "calendar") {
             composable("calendar") { CalendarScreen() }
-            composable("countdown") { CountdownScreen(countdownViewModel) }
+            composable("countdown") { CountdownScreen() }
         }
     }
 

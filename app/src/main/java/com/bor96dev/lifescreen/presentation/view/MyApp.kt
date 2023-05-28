@@ -29,7 +29,7 @@ import kotlinx.coroutines.launch
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
-fun MyApp(viewModel: CountdownViewModel) {
+fun MyApp() {
 
     val navController = rememberNavController()
     Scaffold(
@@ -38,7 +38,7 @@ fun MyApp(viewModel: CountdownViewModel) {
         Box(modifier = Modifier.padding(innerPadding)) {
             NavHost(navController = navController, startDestination = "calendar") {
                 composable("calendar") { CalendarScreen() }
-                composable("countdown") { CountdownScreen(viewModel = viewModel) }
+                composable("countdown") { CountdownScreen() }
             }
         }
     }
